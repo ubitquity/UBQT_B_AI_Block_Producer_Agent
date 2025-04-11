@@ -1,0 +1,7 @@
+def query_gemini(question):
+    response = requests.post(
+        "https://api.gemini.com/ai/ask",
+        headers={"Authorization": "Bearer YOUR_API_KEY"},
+        json={"query": question}
+    )
+    return response.json()["answer"]
